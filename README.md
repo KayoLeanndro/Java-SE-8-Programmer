@@ -11,13 +11,54 @@
 -  http://www.twitter.com/casadocodigo
 -  http://www.facebook.com/casadocodigo
 
+## Assuntos
+
 <details> 
-  <summary>Basico do java</summary>
+  <summary>  Basico do java </summary>
+  <br>
   
- - Defina o escopo de variáveis 
-  - Defina a estrutura de uma classe Java 
-  - Crie aplicações Java executáveis com um método `main`, rode um programa Java na linha de comando 
-  - Importe outros pacotes Java e deixe-os acessíveis ao seu código 
+-  Defina o escopo de variáveis
+
+ O escopo é o que determina em que ponto do código uma variavel pode ser usada.
+
+  ### Variáveis Locais
+  As variáveis locais, são as variaveis dentro de blocos de codigo _(Um bloco é um trecho de código entre chaves. Que pode ser um método ou um construtor)_, assim como dentro de construtores. <br>
+  
+ **_Regra basica: O ciclo de vida de uma variavel local vai do ponto onde ela foi declarada até o fim do bloco onde ela foi declarada._**
+
+```
+public void m1() { // abertura do método
+
+int x = 10; // method local variable
+
+} // Fechamento do método
+```
+
+Ou no corpo de um  `if`, de um  `for` etc.:
+
+```
+public void m1() { // abertura do método
+
+  int x = 10; // variavel local do metodo
+
+  if (x >= 10) { // if - abertura
+
+    int y = 50; // variavel local do IF
+
+    System.out.print(y);
+
+  } // if - fechamento
+
+} // Fechamento do método
+```
+
+ 
+ 
+ 
+   
+- Defina a estrutura de uma classe Java 
+- Crie aplicações Java executáveis com um método `main`, rode um programa Java na linha de comando 
+- Importe outros pacotes Java e deixe-os acessíveis ao seu código 
    
 </details>
 
