@@ -26,7 +26,7 @@
   
  **_Regra basica: O ciclo de vida de uma variavel local vai do ponto onde ela foi declarada até o fim do bloco onde ela foi declarada._**
 
-```
+```java
 public void m1() { // abertura do método
 
 int x = 10; // method local variable
@@ -36,7 +36,7 @@ int x = 10; // method local variable
 
 Ou no corpo de um  `if`, de um  `for` etc.:
 
-```
+```java
 public void m1() { // abertura do método
 
   int x = 10; // variavel local do metodo
@@ -50,6 +50,33 @@ public void m1() { // abertura do método
   } // if - fechamento
 
 } // Fechamento do método
+```
+
+Analisando o codigo, temos uma variavel `x` que é declarada no começo do método, a mesma **pode ser utilizada durante todo o corpo do método**.
+A variável `y` declarada dentro do `if` só existe dentro das chaves `{}`. Se tentar usá-la fora, dará erro no compilador porque ela não existe mais.
+<br>
+Além disso temos que tomar cuidados também são com os loops `for`. As variaveis declaradas dentro da área de inicialização, só pode ser utilizada dentro do corpo do loop.
+Um dos exemplos que mostra a tentativa de usar uma variável cujo escopo não pode ser acessado:
+
+```java
+for (int i = 0, j = 0; i < 10; i++)
+j++;
+System.out.println(j); // Erro de compilação
+```
+<br>
+
+Parâmetros de métodos também podem ser considerados variáveis locais ao método, ou seja, só podem ser usados dentro do método onde foram declarados:
+
+```java
+class Test {
+public void m1(String s) {
+  System.out.print(s);
+}
+
+public void m2() {
+  System.out.println(s); // compilation error
+  }
+}
 ```
 
  
